@@ -1,13 +1,19 @@
-import PizzaMenu from "@app/mocks/pizza.json"
+// import PizzaMenu from "@app/mocks/pizza.json" //получение пицц с файла
 import "./menuList.css"
 import {MenuItem} from "@app/modules/menu/menu-item/menuItem.component"
+import {Pizza} from "@app/modules/menu/types/pizza"
+import {FC} from "react"
 
-export const MenuList = () => {
+interface MenuListProps {
+    items: Pizza[];
+}
+
+export const MenuList: FC<MenuListProps> = ({items}) => {
     return (
         <div className="menu__list">
             {
-                PizzaMenu.map(({image, ...pizza}) => (
-                    <MenuItem {...pizza} imagePath={image} />
+                items.map(({image, ...pizza}) => (
+                    <MenuItem {...pizza} imagePath={image} key={`pizza-${pizza.id}`} />
                 ))
             }
         </div>
