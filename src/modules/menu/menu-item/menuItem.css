@@ -3,10 +3,11 @@
     border-radius: 16px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    margin: 10px;
+    margin: 10px auto;
 }
 .menu__item-img {
     position: relative;
+    height: 255px;
 }
 .menu__item-img img {
     width: 100%;

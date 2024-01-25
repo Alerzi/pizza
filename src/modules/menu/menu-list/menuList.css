@@ -1,5 +1,6 @@
 .menu__list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+	/* grid-auto-rows: 200px; */
+	grid-gap: 20px;
 }
